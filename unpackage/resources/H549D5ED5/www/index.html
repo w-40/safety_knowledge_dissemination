@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title>安全知识传播</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+
+		<!-- 主页面标题 -->
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">安全知识传播</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		</header>
+
+
+
+		<!-- 底部导航-->
+		<nav class="mui-bar mui-bar-tab">
+			<!-- mui-active:默认选中 -->
+			<a class="mui-tab-item mui-active" id="safety_knowledge">
+				<span class="mui-icon mui-icon-navigate"></span>
+				<span class="mui-tab-label">安全知识</span>
+			</a>
+			<a class="mui-tab-item" id="skill_test">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">技能测试</span>
+			</a>
+			<a class="mui-tab-item" id="first_aid_knowledge">
+				<span class="mui-icon mui-icon-starhalf"></span>
+				<span class="mui-tab-label">急救常识</span>
+			</a>
+			<a class="mui-tab-item" id="daily_safety">
+				<span class="mui-icon mui-icon-flag"></span>
+				<span class="mui-tab-label">日常安全</span>
+			</a>
+			<a class="mui-tab-item" id="emergency_strategy">
+				<span class="mui-icon mui-icon-info"></span>
+				<span class="mui-tab-label">应急策略</span>
+			</a>
+			<a class="mui-tab-item" id="about_us">
+				<span class="mui-icon mui-icon-help"></span>
+				<span class="mui-tab-label">关于我们</span>
+			</a>
+		</nav>
+
+	</body>
+
+	</script>
+	<script type="text/javascript">
+		//页面切换
+		mui.init({
+			subpages: [
+				//首先加载首页
+				{
+					url: 'page/safety_knowledge.html',
+					id: 'tab_safety_knowledge',
+					styles: {
+						top: '0px',
+						bottom: '45px'
+					}
+				}
+			],
+			preloadPages: [ //预加载其他页面  
+				{
+					url: 'page/skill_test.html',
+					id: 'tab_skill_test',
+					styles: {
+						top: '0px',
+						bottom: '45px'
+					}
+				},
+				{
+					url: 'page/first_aid_knowledge.html',
+					id: 'tab_first_aid_knowledge',
+					styles: {
+						top: '0px',
+						bottom: '45px'
+					}
+				},
+				{
+					url: 'page/daily_safety.html',
+					id: 'tab_daily_safety',
+					styles: {
+						top: '0px',
+						bottom: '45px'
+					}
+				},
+				{		
+					url: 'page/emergency_strategy.html',				
+					id: 'tab_emergency_strategy',				
+					styles: {			
+						top: '0px',				
+						bottom: '45px'				
+					}				
+				},
+				{				
+					url: 'page/about_us.html',			
+					id: 'tab_about_us',			
+					styles: {			
+						top: '0px',				
+						bottom: '45px'				
+					}				
+				}
+			]
+		});
+
+		mui.plusReady(function() {
+
+			var arr = document.getElementsByClassName("mui-tab-item");
+
+			var objYe = ["page/safety_knowledge.html", "page/skill_test.html", "page/first_aid_knowledge.html", "page/daily_safety.html", "page/emergency_strategy.html", "page/about_us.html"];
+
+			var objStyle = {
+				top: "0px",
+				bottom: "45px"
+			};
+
+			var objs = [];
+
+			var self = plus.webview.currentWebview(); //取到当前的主页窗口
+			for (var i = 0; i < arr.length; i++) {
+
+				! function(i) {
+					var obj = plus.webview.create(objYe[i], objYe[i], objStyle);
+					objs.push(obj);
+					arr[i].addEventListener("tap", function() {
+						for (var j = 0; j < arr.length; j++) {
+							if (j != i) {
+								objs[j].hide()
+							} else {
+								objs[j].show()
+							}
+						}
+						self.append(objs[i])
+					})
+				}(i)
+			}
+			mui.trigger(arr[0], "tap");
+		})
+	</script>
+</html>

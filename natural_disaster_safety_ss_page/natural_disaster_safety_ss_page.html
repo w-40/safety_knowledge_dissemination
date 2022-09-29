@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>灾害防范</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+
+
+		<!-- 引入基础样式文件 mui-player.min.css -->
+		<link rel="stylesheet" type="text/css" href="https://muiplayer.js.org/css/mui-player.min.css" />
+		<!-- 引入基础脚本 mui-player.min.js -->
+		<script type="text/javascript" src="https://muiplayer.js.org/js/mui-player.min.js"></script>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<!-- mui-action-back -->
+			<a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+			<h1 class="mui-title">灾害防范</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" href="#offCanvasSide"></a>
+		</header>
+
+
+
+		<!-- 页面内容 -->
+		<div class="mui-content" style="margin-top: -15px;">
+			<!-- <div id="mui-player"></div> -->
+
+
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right" id="n1">1.认识自然灾害，做好安全应急</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right" id="n2">2.如何应对台风天气</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right" id="n3">3.秋季常见气象灾害及防御 </a>
+			    </li>
+				<li class="mui-table-view-cell">
+				    <a class="mui-navigate-right" id="n4">4.洪涝灾害救援常见传染病防控口袋书 </a>
+				</li>
+				
+			</ul>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+
+		document.getElementById('n1').addEventListener('tap', function() {//
+		  //打开关于页面
+		  mui.openWindow({
+		    url: 'n1.html', 
+		    id:''
+		  });
+		});
+		document.getElementById('n2').addEventListener('tap', function() {//
+		  //打开关于页面
+		  mui.openWindow({
+		    url: 'n2.html', 
+		    id:''
+		  });
+		});
+		document.getElementById('n3').addEventListener('tap', function() {//
+		  //打开关于页面
+		  mui.openWindow({
+		    url: 'n3.html', 
+		    id:''
+		  });
+		});
+		document.getElementById('n4').addEventListener('tap', function() {//
+		  //打开关于页面
+		  mui.openWindow({
+		    url: 'n4.html', 
+		    id:''
+		  });
+		});
+	</script>
+</html>

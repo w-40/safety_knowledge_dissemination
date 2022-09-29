@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>骨折详情页面</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+
+
+		<!-- 引入基础样式文件 mui-player.min.css -->
+		<link rel="stylesheet" type="text/css" href="https://muiplayer.js.org/css/mui-player.min.css" />
+		<!-- 引入基础脚本 mui-player.min.js -->
+		<script type="text/javascript" src="https://muiplayer.js.org/js/mui-player.min.js"></script>
+
+	</head>
+
+	<body>
+
+
+		<header class="mui-bar mui-bar-nav">
+			<!-- mui-action-back -->
+			<a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+			<h1 class="mui-title">骨折</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" href="#offCanvasSide"></a>
+		</header>
+
+
+		<!-- 日常安全页面内容 -->
+		<div class="mui-content">
+
+			<!-- <div id="mui-player"></div> -->
+
+			<!-- 此处写内容 -->
+			<ul class="mui-table-view" style="margin-top: -9px;">
+				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+
+				<h3 style="margin-top: 5px; color: #007AFF;">一.介绍</h3>
+
+				<li class="mui-table-view-cell">
+					<!--mui-active:默认展开-->
+					<a class="mui-navigate-right" href="#">1.鼓励伤者用手,及衬垫、衣物等扶持固定<br>&ensp;患肢,避免不必要的移动。固定患处能减轻<br>&ensp;疼痛,避免进一步的损伤。</a>
+					
+				</li>
+
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="#">2.如果患处明显变形,剧烈疼痛,需要运送至<br>&ensp;医院,应拨打120或者请他人帮助呼叫。</a>
+
+				</li>
+				<li class="mui-table-view-cell >
+					<a class=" mui-navigate-right" href="#">3.确保患处固定,直到医护人员抵达。</a>
+
+				</li>
+			</ul>
+		</div>
+
+
+		<ul class="mui-table-view" style="margin-top: -9px;">
+			<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+			<h3 style="margin-top: 5px; color: #007AFF;">二.常见问题</h3>
+
+
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">怎样判断是否骨折?</a>
+				<div class="mui-collapse-content">
+					<p>&ensp;&ensp;&ensp;&ensp;
+					伤处可有瘀血、肿痛,或者以不正常的姿势倒卧。重骨折可有肢体畸形,或者开放伤口
+					</p>
+				</div>
+			</li>
+
+
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">怎样固定骨折?</a>
+				<div class="mui-collapse-content">
+					<p>&ensp;&ensp;&ensp;&ensp;不要随意移动伤肢。可用软垫(如衣物、毯子等)包裹患肢。保持固定位,等待救援到达
+					</p>
+				</div>
+			</li>
+
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">如果伤者不让固定伤肢怎么办?</a>
+				<div class="mui-collapse-content">
+					<p>&ensp;&ensp;&ensp;&ensp;鼓励伤者自己用手固定伤处。也可以用衬垫或软垫承托。</p>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">如果肢体骨折或脱位,我能复位吗?</a>
+				<div class="mui-collapse-content">
+					<p>&ensp;&ensp;&ensp;&ensp;不能。如果脱位或骨折,应由医生处理。不要试图现场复位,可能会造成进一步的损伤。</p>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">如果伤者除了擦伤没有其他异常,怎么处置?</a>
+				<div class="mui-collapse-content">
+					<p>&ensp;&ensp;&ensp;&ensp;弄清受伤的原因(如坠落、物体撞击等),以判断是否可能造成骨折。但在没有Ⅹ-光检查的情况下很难区分骨折、关节受伤或脱位。如果存有疑虑，最好去医院检查。
+					</p>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">伤者能活动患肢并用其支撑站立。是否<br>意味着他们没有骨折?
+				</a>
+				<div class="mui-collapse-content">
+					<p>&ensp;&ensp;&ensp;&ensp;不能完全确定。还需要Ⅹ-光检查诊断是否骨折。即使存在骨折,伤者也可能可以移动患肢。如果损伤导致的疼痛、不适等症状不能很快缓解,应该到医院就诊
+					</p>
+				</div>
+			</li>
+		</ul>
+		</div>
+
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+
+
+
+		// 初始化 MuiPlayer 插件，MuiPlayer 方法传递一个对象，该对象包括所有插件的配置
+		var mp = new MuiPlayer({
+			container: '#mui-player',
+			title: '视频标题',
+			src: 'https://vd2.bdstatic.com/mda-iisit48eumwk1d2e/sc/mda-iisit48eumwk1d2e.mp4?v_from_s=hkapp-haokan-hbe&auth_key=1639199220-0-0-0620e9ad61db69e045d7db77bb9f992f&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=3000202_1&klogid=2220772251'
+		});
+	</script>
+</html>

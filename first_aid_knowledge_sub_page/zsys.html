@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>蜇伤和咬伤详情页面</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+
+
+		<!-- 引入基础样式文件 mui-player.min.css -->
+		<link rel="stylesheet" type="text/css" href="https://muiplayer.js.org/css/mui-player.min.css" />
+		<!-- 引入基础脚本 mui-player.min.js -->
+		<script type="text/javascript" src="https://muiplayer.js.org/js/mui-player.min.js"></script>
+
+	</head>
+
+	<body>
+
+
+		<header class="mui-bar mui-bar-nav">
+			<!-- mui-action-back -->
+			<a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+			<h1 class="mui-title">蜇伤和咬伤</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" href="#offCanvasSide"></a>
+		</header>
+
+
+		<!-- 日常安全页面内容 -->
+		<div class="mui-content">
+
+			<!-- <div id="mui-player"></div> -->
+
+			<!-- 此处写内容 -->
+			<ul class="mui-table-view" style="margin-top: -9px;">
+				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+
+				<h3 style="margin-top: 5px; color: #007AFF;">一.介绍</h3>
+
+				<li class="mui-table-view-cell ">
+					<!--mui-active:默认展开-->
+					<a class="mui-navigate-right" href="#">&ensp;&ensp;&ensp;&ensp;昆虫蛰伤或叮咬可以导致严重的损伤或疾<br>病应遵照这些预防措施防范蜇伤、叮咬,<br>保护自己和家人,特别是蜱虫的叮咬。</a>
+
+				</li>
+			</ul>
+		</div>
+
+
+		<ul class="mui-table-view" style="margin-top: -9px;">
+			<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+			<h3 style="margin-top: 5px; color: #007AFF;">二.相关急救</h3>
+			<li class="mui-table-view-cell">
+				<a href="../../first_aid_knowledge_sub_page/wyswzzhx.html">昆虫蜇伤和叮咬</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a href="../../first_aid_knowledge_sub_page/wysyzzhx.html">蜱虫</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a href="../../first_aid_knowledge_sub_page/wysyzzhx.html">蝎子和蜘蛛</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a href="../../first_aid_knowledge_sub_page/wysyzzhx.html">水母</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a href="../../first_aid_knowledge_sub_page/wysyzzhx.html">毒蛇</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a href="../../first_aid_knowledge_sub_page/wysyzzhx.html">动物</a>
+			</li>
+		</ul>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+
+
+		// 初始化 MuiPlayer 插件，MuiPlayer 方法传递一个对象，该对象包括所有插件的配置
+		var mp = new MuiPlayer({
+			container: '#mui-player',
+			title: '视频标题',
+			src: 'https://vd2.bdstatic.com/mda-iisit48eumwk1d2e/sc/mda-iisit48eumwk1d2e.mp4?v_from_s=hkapp-haokan-hbe&auth_key=1639199220-0-0-0620e9ad61db69e045d7db77bb9f992f&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=3000202_1&klogid=2220772251'
+		});
+	</script>
+</html>

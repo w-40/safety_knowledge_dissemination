@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>技能测试</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">技能测试</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" href="#offCanvasSide"></a>
+		</header>
+		
+		<div class="mui-content" style="margin-top: -14px;">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a id="test1">
+			            <img class="mui-media-object mui-pull-left" src="../img/1.jpg">
+			            <div class="mui-media-body">
+			                消防安全知识测试
+			                <p class='mui-ellipsis'>来测试一下自己的学习成果吧</p>
+			            </div>
+			        </a>
+			    </li>
+			    
+			    <li class="mui-table-view-cell mui-media">
+			        <a  id="test3">
+			            <img class="mui-media-object mui-pull-left" src="../img/3.jpg">
+			            <div class="mui-media-body">
+			                交通安全知识测试
+			                <p class='mui-ellipsis'>出门之前测一测复习一下吧！</p>
+			            </div>
+			        </a>
+			    </li>
+				<li class="mui-table-view-cell mui-media">
+				    <a  id="test4">
+				        <img class="mui-media-object mui-pull-left" src="../img/4.png">
+				        <div class="mui-media-body">
+				            用电安全知识测试
+				            <p class='mui-ellipsis'>记得做题巩固一下哦</p>
+				        </div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+				    <a  id="test5">
+				        <img class="mui-media-object mui-pull-left" src="../img/5.jpg">
+				        <div class="mui-media-body">
+				            生产安全知识测试
+				            <p class='mui-ellipsis'>熟能生巧哦</p>
+				        </div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+				    <a id="test2">
+				        <img class="mui-media-object mui-pull-left" src="../img/2.jpg">
+				        <div class="mui-media-body">
+				            安全知识总测试
+				            <p class='mui-ellipsis'>学习完了？来试试吧！</p>
+				        </div>
+				    </a>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+
+
+		<script src="../js/mui.min.js"></script>
+
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		
+		document.getElementById('test1').addEventListener('tap', function() { //
+			//打开关于页面
+			mui.openWindow({
+				url: '../skill_test/fire_test.html',
+				id: ''
+			});
+		});
+		
+		document.getElementById('test2').addEventListener('tap', function() { //
+			//打开关于页面
+			mui.openWindow({
+				url: '../skill_test/total_test.html',
+				id: ''
+			});
+		});
+		
+		document.getElementById('test3').addEventListener('tap', function() { //
+			//打开关于页面
+			mui.openWindow({
+				url: '../skill_test/traffic.html',
+				id: ''
+			});
+		});
+		
+		document.getElementById('test4').addEventListener('tap', function() { //
+			//打开关于页面
+			mui.openWindow({
+				url: '../skill_test/ele.html',
+				id: ''
+			});
+		});
+		
+		document.getElementById('test5').addEventListener('tap', function() { //
+			//打开关于页面
+			mui.openWindow({
+				url: '../skill_test/produce.html',
+				id: ''
+			});
+		});
+		
+	</script>
+</html>

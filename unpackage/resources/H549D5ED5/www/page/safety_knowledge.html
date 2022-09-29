@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title></title>
+		<script src="../js/mui.min.js"></script>
+		<!-- <script src="../js/mui.js"></script> -->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+
+		<!-- 主页面标题 -->
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">安全知识传播</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		</header>
+
+		<!-- 主页面内容 -->
+		<div class="mui-content">
+			<!-- 轮播图 -->
+			<div id="slider" class="mui-slider" style="margin-top: 0px;">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../img/3.jpg">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../img/1.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../img/2.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../img/3.jpg">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../img/1.jpg">
+						</a>
+					</div>
+				</div>
+				<!-- 图片轮播实现 -->
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<!-- <div class="mui-indicator"></div> -->
+				</div>
+			</div>
+			<!-- 主页面安全知识 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">过敏反应</a>
+					<div class="mui-collapse-content">
+						<p>过敏反应是指已产生免疫的机体在再次接受相同抗原刺激时所发生的组织损伤或功能紊乱的反应。</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">哮喘发作</a>
+					<div class="mui-collapse-content">
+						<p></p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">出血</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">骨折</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">烧伤烫伤</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">心脏病发作</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">休克</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">中风</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">拉伤扭伤</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">中毒</a>
+					<div class="mui-collapse-content">
+						<p>面板3子内容</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		mui.init({
+
+			swipeBack: true //启用右滑关闭功能
+
+		});
+
+		//图片轮播
+
+		//获得slider插件对象
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+			interval: 1000 //自动轮播周期，若为0则不自动播放，默认为0；
+		});
+	</script>
+</html>

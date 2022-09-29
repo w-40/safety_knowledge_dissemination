@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>过敏反应详情页面</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+
+
+		<!-- 引入基础样式文件 mui-player.min.css -->
+		<link rel="stylesheet" type="text/css" href="https://muiplayer.js.org/css/mui-player.min.css" />
+		<!-- 引入基础脚本 mui-player.min.js -->
+		<script type="text/javascript" src="https://muiplayer.js.org/js/mui-player.min.js"></script>
+		<style>
+		.calldiv{
+			background-color: red;
+			width: 280px;
+			height: 40px;
+			margin-left: 10%;
+			margin-top: 5px;
+			text-align: center;
+			
+		}
+		.p{
+			line-height: 40px;
+			color: white;
+			font-size:30px;
+		}
+		
+		</style>
+
+	</head>
+
+	<body>
+
+
+		<header class="mui-bar mui-bar-nav">
+			<!-- mui-action-back -->
+			<a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+			<h1 class="mui-title">过敏反应</h1>
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-right" href="#offCanvasSide"></a>
+		</header>
+
+
+		<!-- 日常安全页面内容 -->
+		<div class="mui-content">
+
+			<div id="mui-player"></div>
+
+			<!-- 此处写内容 -->
+			<ul class="mui-table-view" style="margin-top: -9px;">
+				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+
+				<center><h3 style="margin-top: 5px; color:red;font-size: 30px; font-family: 宋体;">急救步骤</h3></center>
+				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+
+				<li class="mui-table-view-cell mui-collapse  ">
+					<!--mui-active:默认展开-->
+					<a class="mui-navigate-right" href="#"><span style="color:red;font-size:40px;">1.</span>患者手、足或面部出现皮疹、骚痒或水肿<br>&nbsp;&nbsp;&nbsp;
+						,并可能出现呼吸浅慢。</a>
+					<div class="mui-collapse-content ">
+						<p>&ensp;&ensp;&ensp;&ensp;也可能会出现呕吐和腹泻状况。引起过敏反应
+							的常见过敏原有花粉、蚊虫叮咬、乳胶,还有
+							些食物,如坚果或者奶制品等。</p>
+					</div>
+				</li>
+
+				<li class="mui-table-view-cell mui-collapse mui-active">
+					<a class="mui-navigate-right" href="#"><span style="color:red;font-size:40px;">2.</span>如果有人发生过敏反应,请<span style="color:red;font-size:20px;">拨打120</span>。</a>
+					<div class=calldiv id=pd_communicate><p class=p>拨打120</p></div>
+					<div class="mui-collapse-content" >
+						<p>&ensp;&ensp;&ensp;&ensp;如果有人发生过敏反应(呼吸困难、休克或者
+							精神异常),并带有自动注射器,请帮助他们
+							用药。</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell >
+					<a class=" mui-navigate-right" href="#"><span style="color:red;font-size:40px;">3.</span>等候救护车时,请持续<span style="color:red;font-size:20px;">观察并安抚</span>患者。</a>
+					<div class="mui-collapse-content">
+						<p></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="mui-table-view" style="margin-top: -9px;">
+			<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+			<li class="mui-table-view-cell">
+			<a class="mui-navigate-right" id="ljgd"">了解更多</a>
+			</li>
+		</ul>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		document.getElementById('ljgd').addEventListener('tap', function() {//过敏反应
+		  //打开关于页面
+		  mui.openWindow({
+		    url: '../first_aid_knowledge_sub_page/gmfy.html', 
+		    id:''
+		  });
+		});
+		document.getElementById('pd_communicate').addEventListener('tap', function () {
+		       var btnArray = ['取消', '呼叫'];
+		       mui.confirm('即将进入拨号页面...', '确认呼叫120吗？', btnArray, function(e) {
+		           if (e.index == 1) {
+		               window.location.href = 'tel:120';//拨打客服电话
+		           } else {
+		           }
+		       })
+		   })
+
+	</script>
+</html>
